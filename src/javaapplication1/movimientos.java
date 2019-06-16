@@ -238,7 +238,7 @@ public class movimientos extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-     lobby obj= new lobby();
+     lobby obj= new lobby(this.id, this.saldo);
      obj.setVisible(true);
      dispose();
         
