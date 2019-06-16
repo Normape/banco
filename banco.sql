@@ -27,7 +27,7 @@ CREATE TABLE `cliente` (
   `email` varchar(45) COLLATE utf8_bin NOT NULL,
   `telefono` varchar(45) COLLATE utf8_bin NOT NULL,
   `celular` varchar(45) COLLATE utf8_bin NOT NULL,
-  `saldo` int(11) NOT NULL DEFAULT 20000
+  `saldo` int(11) NOT NULL
 );
 
 --
