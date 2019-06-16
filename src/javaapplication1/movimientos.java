@@ -294,10 +294,10 @@ public class movimientos extends javax.swing.JFrame {
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Integer retiro = Integer.parseInt(JOptionPane.showInputDialog(null,"ingrese el valor a retirar"));
-        this.saldo -= retiro;
-       
+               
        try {
            if(saldoIsValido(retiro)){
+               this.saldo -= retiro;
              String query = "UPDATE cliente SET saldo = ? WHERE id = ?;";
             PreparedStatement sentenciaP = bd.conectar().prepareStatement(query);
             sentenciaP.setInt(1, this.saldo);
@@ -323,6 +323,7 @@ public class movimientos extends javax.swing.JFrame {
             while (resultado.next()) {
                 int id = resultado.getInt("id");
                 int saldo = resultado.getInt("saldo");
+                this.saldo = saldo;
                 JOptionPane.showMessageDialog(null,"Su saldo es: " + saldo);    
             }
             if(!resultado.first()) {
